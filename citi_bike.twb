@@ -655,6 +655,104 @@
         </panes>
         <rows>[federated.0yp20il1rm8kjp1957tap0as940h].[avg:tripduration:qk]</rows>
         <cols>[federated.0yp20il1rm8kjp1957tap0as940h].[none:Calculation_1314769637341888515:qk]</cols>
+        <annotations>
+          <annotation class='point' id='1' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run bold='true'>Ages over 75 have been excluded. Most riders over this age likely lied about their age.</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0yp20il1rm8kjp1957tap0as940h].[none:Calculation_1314769637341888515:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0yp20il1rm8kjp1957tap0as940h].[avg:tripduration:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0yp20il1rm8kjp1957tap0as940h].[avg:tripduration:qk]</field>
+                      <field>[federated.0yp20il1rm8kjp1957tap0as940h].[none:Calculation_1314769637341888515:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>853.30873308733089</value>
+                    <value>75</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='point' id='2' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run bold='true'>Ages over the age of 75 have been excluded as it is highly like they lied about their age.</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0yp20il1rm8kjp1957tap0as940h].[none:Calculation_1314769637341888515:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0yp20il1rm8kjp1957tap0as940h].[avg:tripduration:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0yp20il1rm8kjp1957tap0as940h].[avg:tripduration:qk]</field>
+                      <field>[federated.0yp20il1rm8kjp1957tap0as940h].[none:Calculation_1314769637341888515:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>853.30873308733089</value>
+                    <value>75</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='area' id='3' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text>
+              <run bold='true' fontalignment='0' fontsize='8'>Ages over the age of 75 have been excluded as it is highly like they lied about their age.</run>
+            </formatted-text>
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='65.475336322869964'>
+                  <node-reference>
+                    <axis>[federated.0yp20il1rm8kjp1957tap0as940h].[none:Calculation_1314769637341888515:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='1406.962331838565'>
+                  <node-reference>
+                    <axis>[federated.0yp20il1rm8kjp1957tap0as940h].[avg:tripduration:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='74.933856502242151'>
+                  <node-reference>
+                    <axis>[federated.0yp20il1rm8kjp1957tap0as940h].[none:Calculation_1314769637341888515:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='1007.6892376681615'>
+                  <node-reference>
+                    <axis>[federated.0yp20il1rm8kjp1957tap0as940h].[avg:tripduration:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+        </annotations>
       </table>
       <simple-id uuid='{E865191F-D853-47C0-9421-848CE81565B7}' />
     </worksheet>

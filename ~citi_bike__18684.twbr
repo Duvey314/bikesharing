@@ -258,6 +258,9 @@
         </metadata-records>
       </connection>
       <aliases enabled='yes' />
+      <column datatype='integer' name='[Bikeid (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='2' formula='[bikeid]' peg='0' size='424' />
+      </column>
       <column caption='Gender (String)' datatype='string' name='[Calculation_1314769637340639234]' role='dimension' type='nominal'>
         <calculation class='tableau' formula='if [gender]=&apos;0&apos; THEN &apos;UNKNOWN&apos;&#13;&#10;ELSEIF [gender]=&apos;1&apos; THEN &apos;MALE&apos;&#13;&#10;ELSEIF [gender]=&apos;2&apos; THEN &apos;FEMALE&apos; END' />
       </column>
@@ -380,6 +383,29 @@
         <cols>[federated.0yp20il1rm8kjp1957tap0as940h].[__tableau_internal_object_id__].[cnt:201908-citibike-tripdata.csv_D2FB6DA10A554FA1B2B6F73732F6A4B4:qk]</cols>
       </table>
       <simple-id uuid='{26B45C57-61A7-417B-9373-B9C27B187E02}' />
+    </worksheet>
+    <worksheet name='Bike Repairs'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <show-full-range>
+          <column>[federated.0yp20il1rm8kjp1957tap0as940h].[none:Bikeid (bin):qk]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{CFAF9725-CE4F-4C36-BC8A-EDA7D29B7CE0}' />
     </worksheet>
     <worksheet name='Customers'>
       <table>
@@ -524,6 +550,26 @@
         <cols />
       </table>
       <simple-id uuid='{D48F7510-4E63-42AA-A1F0-A0FEEF421DEE}' />
+    </worksheet>
+    <worksheet name='Sheet 10'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{F5EF84CD-36EA-4839-BC14-D37483B61771}' />
     </worksheet>
     <worksheet name='Top Ending Locations'>
       <table>
@@ -685,6 +731,72 @@
               </visual-coordinate>
             </point>
             <body x='130' y='-20' />
+          </annotation>
+          <annotation class='point' id='2' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run bold='true'>Ages over the age of 75 have been excluded as it is highly like they lied about their age.</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.0yp20il1rm8kjp1957tap0as940h].[none:Calculation_1314769637341888515:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.0yp20il1rm8kjp1957tap0as940h].[avg:tripduration:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.0yp20il1rm8kjp1957tap0as940h].[avg:tripduration:qk]</field>
+                      <field>[federated.0yp20il1rm8kjp1957tap0as940h].[none:Calculation_1314769637341888515:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>853.30873308733089</value>
+                    <value>75</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='area' id='3' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text>
+              <run bold='true' fontalignment='0' fontsize='8'>Ages over the age of 75 have been excluded as it is highly like they lied about their age.</run>
+            </formatted-text>
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='65.475336322869964'>
+                  <node-reference>
+                    <axis>[federated.0yp20il1rm8kjp1957tap0as940h].[none:Calculation_1314769637341888515:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='1406.962331838565'>
+                  <node-reference>
+                    <axis>[federated.0yp20il1rm8kjp1957tap0as940h].[avg:tripduration:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='74.933856502242151'>
+                  <node-reference>
+                    <axis>[federated.0yp20il1rm8kjp1957tap0as940h].[none:Calculation_1314769637341888515:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='1007.6892376681615'>
+                  <node-reference>
+                    <axis>[federated.0yp20il1rm8kjp1957tap0as940h].[avg:tripduration:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
           </annotation>
         </annotations>
       </table>
@@ -877,7 +989,7 @@
       </cards>
       <simple-id uuid='{C28882AA-465A-42EA-9001-FC95755B42F6}' />
     </window>
-    <window class='worksheet' maximized='true' name='Trip Duration by Age'>
+    <window class='worksheet' name='Trip Duration by Age'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -899,6 +1011,52 @@
         </edge>
       </cards>
       <simple-id uuid='{15A49E36-CF82-4546-A052-7605A4227BFC}' />
+    </window>
+    <window class='worksheet' name='Bike Repairs'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{039C2DCD-1A1A-4D63-A37E-9FF979DC5E2A}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 10'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F4847B6A-4977-4AE0-B74F-2681A863F7DA}' />
     </window>
   </windows>
 </workbook>
