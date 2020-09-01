@@ -459,6 +459,55 @@
       </table>
       <simple-id uuid='{D48F7510-4E63-42AA-A1F0-A0FEEF421DEE}' />
     </worksheet>
+    <worksheet name='Top Ending Locations'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='201908-citibike-tripdata' name='federated.0yp20il1rm8kjp1957tap0as940h' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0yp20il1rm8kjp1957tap0as940h'>
+            <_.fcp.ObjectModelTableType.true...column caption='201908-citibike-tripdata.csv' datatype='table' name='[__tableau_internal_object_id__].[201908-citibike-tripdata.csv_D2FB6DA10A554FA1B2B6F73732F6A4B4]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[201908-citibike-tripdata.csv_D2FB6DA10A554FA1B2B6F73732F6A4B4]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:201908-citibike-tripdata.csv_D2FB6DA10A554FA1B2B6F73732F6A4B4:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Avg' caption='End Station Latitude' datatype='real' name='[end station latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' caption='End Station Longitude' datatype='real' name='[end station longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column-instance column='[end station latitude]' derivation='None' name='[none:end station latitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[end station longitude]' derivation='None' name='[none:end station longitude:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.false...column caption='201908-citibike-tripdata.csv' datatype='integer' name='[__tableau_internal_object_id__].[201908-citibike-tripdata.csv_D2FB6DA10A554FA1B2B6F73732F6A4B4]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0yp20il1rm8kjp1957tap0as940h].[none:end station longitude:qk]' field-type='quantitative' max='-8226545.8108521774' min='-8244166.6440776186' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0yp20il1rm8kjp1957tap0as940h].[none:end station latitude:qk]' field-type='quantitative' max='4980179.8086280338' min='4969060.0780077362' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0yp20il1rm8kjp1957tap0as940h].[__tableau_internal_object_id__].[cnt:201908-citibike-tripdata.csv_D2FB6DA10A554FA1B2B6F73732F6A4B4:qk]' palette='red_blue_diverging_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0yp20il1rm8kjp1957tap0as940h].[__tableau_internal_object_id__].[cnt:201908-citibike-tripdata.csv_D2FB6DA10A554FA1B2B6F73732F6A4B4:qk]' />
+              <size column='[federated.0yp20il1rm8kjp1957tap0as940h].[__tableau_internal_object_id__].[cnt:201908-citibike-tripdata.csv_D2FB6DA10A554FA1B2B6F73732F6A4B4:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0yp20il1rm8kjp1957tap0as940h].[none:end station latitude:qk]</rows>
+        <cols>[federated.0yp20il1rm8kjp1957tap0as940h].[none:end station longitude:qk]</cols>
+      </table>
+      <simple-id uuid='{9382D924-3A94-4B41-9752-7E759AF1AA26}' />
+    </worksheet>
     <worksheet name='Top Starting Locations'>
       <table>
         <view>
@@ -481,8 +530,8 @@
         </view>
         <style>
           <style-rule element='axis'>
-            <encoding attr='space' class='0' field='[federated.0yp20il1rm8kjp1957tap0as940h].[none:start station longitude:qk]' field-type='quantitative' max='-8230520.5561073003' min='-8241905.5628102208' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
-            <encoding attr='space' class='0' field='[federated.0yp20il1rm8kjp1957tap0as940h].[none:start station latitude:qk]' field-type='quantitative' max='4977570.420502835' min='4970385.8449480338' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.0yp20il1rm8kjp1957tap0as940h].[none:start station longitude:qk]' field-type='quantitative' max='-8224339.9860413941' min='-8249500.246990825' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0yp20il1rm8kjp1957tap0as940h].[none:start station latitude:qk]' field-type='quantitative' max='4984950.8555420684' min='4969073.3246379094' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
           </style-rule>
           <style-rule element='mark'>
             <encoding attr='color' field='[federated.0yp20il1rm8kjp1957tap0as940h].[__tableau_internal_object_id__].[cnt:201908-citibike-tripdata.csv_D2FB6DA10A554FA1B2B6F73732F6A4B4:qk]' palette='red_blue_diverging_10_0' symmetric='false' type='interpolated' />
@@ -498,6 +547,7 @@
             </view>
             <mark class='Automatic' />
             <encodings>
+              <color column='[federated.0yp20il1rm8kjp1957tap0as940h].[__tableau_internal_object_id__].[cnt:201908-citibike-tripdata.csv_D2FB6DA10A554FA1B2B6F73732F6A4B4:qk]' />
               <size column='[federated.0yp20il1rm8kjp1957tap0as940h].[__tableau_internal_object_id__].[cnt:201908-citibike-tripdata.csv_D2FB6DA10A554FA1B2B6F73732F6A4B4:qk]' />
             </encodings>
           </pane>
@@ -630,10 +680,40 @@
         <edge name='right'>
           <strip size='160'>
             <card pane-specification-id='0' param='[federated.0yp20il1rm8kjp1957tap0as940h].[__tableau_internal_object_id__].[cnt:201908-citibike-tripdata.csv_D2FB6DA10A554FA1B2B6F73732F6A4B4:qk]' type='size' />
+            <card pane-specification-id='0' param='[federated.0yp20il1rm8kjp1957tap0as940h].[__tableau_internal_object_id__].[cnt:201908-citibike-tripdata.csv_D2FB6DA10A554FA1B2B6F73732F6A4B4:qk]' type='color' />
           </strip>
         </edge>
       </cards>
       <simple-id uuid='{D6F97D6B-7D36-4CBA-8BA2-ACEEF3725AAC}' />
+    </window>
+    <window class='worksheet' name='Top Ending Locations'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0yp20il1rm8kjp1957tap0as940h].[__tableau_internal_object_id__].[cnt:201908-citibike-tripdata.csv_D2FB6DA10A554FA1B2B6F73732F6A4B4:qk]' type='size' />
+            <card pane-specification-id='0' param='[federated.0yp20il1rm8kjp1957tap0as940h].[__tableau_internal_object_id__].[cnt:201908-citibike-tripdata.csv_D2FB6DA10A554FA1B2B6F73732F6A4B4:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{52129413-F504-44F1-8EA7-5A59AEAEFE9C}' />
     </window>
   </windows>
 </workbook>
