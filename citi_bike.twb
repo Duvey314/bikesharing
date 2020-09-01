@@ -319,6 +319,40 @@
     </datasource>
   </datasources>
   <worksheets>
+    <worksheet name='Customers'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='201908-citibike-tripdata' name='federated.0yp20il1rm8kjp1957tap0as940h' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0yp20il1rm8kjp1957tap0as940h'>
+            <_.fcp.ObjectModelTableType.true...column caption='201908-citibike-tripdata.csv' datatype='table' name='[__tableau_internal_object_id__].[201908-citibike-tripdata.csv_D2FB6DA10A554FA1B2B6F73732F6A4B4]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[201908-citibike-tripdata.csv_D2FB6DA10A554FA1B2B6F73732F6A4B4]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:201908-citibike-tripdata.csv_D2FB6DA10A554FA1B2B6F73732F6A4B4:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[usertype]' derivation='None' name='[none:usertype:nk]' pivot='key' type='nominal' />
+            <column caption='Usertype' datatype='string' name='[usertype]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.false...column caption='201908-citibike-tripdata.csv' datatype='integer' name='[__tableau_internal_object_id__].[201908-citibike-tripdata.csv_D2FB6DA10A554FA1B2B6F73732F6A4B4]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.0yp20il1rm8kjp1957tap0as940h].[none:usertype:nk]' />
+              <wedge-size column='[federated.0yp20il1rm8kjp1957tap0as940h].[__tableau_internal_object_id__].[cnt:201908-citibike-tripdata.csv_D2FB6DA10A554FA1B2B6F73732F6A4B4:qk]' />
+              <size column='[federated.0yp20il1rm8kjp1957tap0as940h].[__tableau_internal_object_id__].[cnt:201908-citibike-tripdata.csv_D2FB6DA10A554FA1B2B6F73732F6A4B4:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{B433B415-4759-4B39-82DE-E1105620AD5D}' />
+    </worksheet>
     <worksheet name='Number of Records'>
       <layout-options>
         <title>
@@ -417,7 +451,7 @@
       </cards>
       <simple-id uuid='{D87E21F1-02F4-4CA5-B6D9-D5436EFD2AF0}' />
     </window>
-    <window class='worksheet' maximized='true' name='Number of Records'>
+    <window class='worksheet' name='Number of Records'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -440,8 +474,81 @@
       </cards>
       <simple-id uuid='{0CC0481E-59EB-4715-B889-0A0D14629634}' />
     </window>
+    <window class='worksheet' maximized='true' name='Customers'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0yp20il1rm8kjp1957tap0as940h].[none:usertype:nk]' type='color' />
+            <card pane-specification-id='0' param='[federated.0yp20il1rm8kjp1957tap0as940h].[__tableau_internal_object_id__].[cnt:201908-citibike-tripdata.csv_D2FB6DA10A554FA1B2B6F73732F6A4B4:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0yp20il1rm8kjp1957tap0as940h].[none:usertype:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{898A7222-4A2C-4336-8C99-EA8EC39D410C}' />
+    </window>
   </windows>
   <thumbnails>
+    <thumbnail height='164' name='Customers' width='164'>
+      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
+    </thumbnail>
     <thumbnail height='56' name='Number of Records' width='192'>
       iVBORw0KGgoAAAANSUhEUgAAAMAAAAA4CAYAAACrHfdzAAAACXBIWXMAAA7DAAAOwwHHb6hk
       AAANHElEQVR4nO2cbUxTZxvH/7a8o0UTYJEZgs4xQ2RuKxUlBgZBBOcY4sbcGAuL2DGigtsY
